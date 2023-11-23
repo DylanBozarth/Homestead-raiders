@@ -1,6 +1,6 @@
 import { Text, View, Button} from "react-native"
 
-export const Shelter = ({navigation}) => {
+export const Shelter = ({navigation}: {navigation: any}) => {
     return (
         <View>
             <Text>SHELTA</Text>
