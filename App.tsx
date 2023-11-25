@@ -14,15 +14,26 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 const bottomTab = createBottomTabNavigator();
 const topTab = createMaterialTopTabNavigator();
 
+const screenOptions = {
+  unmountOnBlur: false,
+  headerShown: false,
+  tabBarStyle:{
+    backgroundColor:'brown',
+  },
+  tabBarItemStyle:{
+    backgroundColor:'green',
+    color: 'white',
+  },
+};
 export default function App() {
   return (
     <NavigationContainer>
       <SafeAreaProvider>
-      <topTab.Navigator initialRouteName="Home">
-        <topTab.Screen name="home" component={Homepage} />
-        <topTab.Screen name="shelter" component={Shelter} />
-        <topTab.Screen name="tasks" component={Tasks} />
-      </topTab.Navigator>
+        <topTab.Navigator initialRouteName="Home" {...{ screenOptions }}>
+          <topTab.Screen name="a" component={Homepage} />
+          <topTab.Screen name="tasks" component={Tasks} />
+          <topTab.Screen name="shelter" component={Shelter} />
+        </topTab.Navigator>
       </SafeAreaProvider>
     </NavigationContainer>
   );
