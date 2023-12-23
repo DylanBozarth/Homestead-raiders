@@ -7,5 +7,5 @@ SplashScreen.preventAutoHideAsync()
 function IgniteApp() {
   return <App hideSplashScreen={SplashScreen.hideAsync} />
 }
-
+//test 
 export default IgniteApp
